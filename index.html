@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Video</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet"> 
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="script.js"></script> 
+    
+    <meta http-equiv-"X-UA-Compatible" content="IE=edge"/>
+    
+</head>
+<body>
+  
+  <div class="wrapper">
+  <figure id="video-container">
+  
+   <video id="video">
+   
+       <source src="video/video.mp4" type="video/mp4">
+       <source src="video/video.ogg" type="video/ogg">
+       <track src="captions.vtt" kind="subtitles" srclang="en" label="English">
+
+   </video>
+   
+   
+   <!-- Video Controls -->
+     <div id="control-container">
+                        
+        <progress id="progress-bar" value="0" max="100"></progress>
+        
+     <div id="video-controls" class="controls">
+       
+        <button type="button" id="play-pause"><img src="icons/play-icon.png" alt="Play"></button>
+        
+      <div id="video-time">
+       
+        <span id="currentTime">0:00 /</span><span id="durationTime"> 0:00</span>
+        
+      </div>
+       
+        <button type="button" id="mute"><img src="icons/volume-on-icon.png" alt="Volume On/Off"></button>
+        
+        <button type="button" id="full-screen"><img src="icons/fullscreen-icon.png" alt="Fullscreen"></button>
+        
+      </div>
+    </div>
+  </figure><!--- end video-container --->
+  </div><!--- end wrapper --->
+  <div class="container">
+  <div>
+   
+    <p>
+    
+         <span id="line1">Now that we've looked at the architecture of the internet, let's see how you might</span> 
+
+         <span id="line2">connect your personal devices to the internet inside your house.</span> 
+
+         <span id="line3">Well there are many ways to connect to the internet, and</span> 
+
+         <span id="line4">most often people connect wirelessly.</span>
+
+         <span id="line5">Let's look at an example of how you can connect to the internet.</span>
+     
+   </p>
+   
+	</div>
+
+	<div>
+   
+    <p>
+		 <span id="line6">If you live in a city or a town, you probably have a coaxial cable for</span> 
+
+         <span id="line7">cable Internet, or a phone line if you have DSL, running to the outside of</span>
+
+         <span id="line8">your house, that connects you to the Internet Service Provider, or ISP.</span>
+     
+   </p>
+   
+	</div>
+
+	<div>
+   
+    <p>
+		 <span id="line9">If you live far out in the country, you'll more likely have</span> 
+     
+         <span id="line10">a dish outside your house, connecting you wirelessly to your closest ISP, or</span> 
+
+         <span id="line11">you might also use the telephone system.</span> 
+
+         <span id="line12">Whether a wire comes straight from the ISP hookup outside your house, or</span>
+
+         <span id="line13">it travels over radio waves from your roof,</span> 
+
+         <span id="line14">the first stop a wire will make once inside your house, is at your modem.</span>
+     
+   </p>
+   
+	</div>
+
+	<div>
+   
+    <p class="last-paragraph">
+        
+         <span id="line15">A modem is what connects the internet to your network at home.</span> 
+
+         <span id="line16">A few common residential modems are DSL or</span>
+     
+   </p>
+   
+	</div>		
+  	
+  	 </div><!--- end container --->  		
+   
+
+   
+</body>
+
+
+
+</html>
+

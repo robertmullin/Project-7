@@ -8,35 +8,23 @@ window.onload = function() {
     var progressBar = document.getElementById('progress-bar');
 	var muteButton = document.getElementById("mute");
 	var fullScreenButton = document.getElementById("full-screen");
-    // Progress
-	var seekBar = document.getElementById("seek-bar");
-	var volumeBar = document.getElementById("volume-bar");
-    
-    //Time
-    
-    var cTime = document.getElementById("currentTime");
-    var dTime = document.getElementById("durationTime");
-
 
 	// Event listener for the play/pause button
 	playButton.addEventListener("click", function() {
-	  if (video.paused == true) {
-	    // Play the video
+	  if (video.paused === true) {
+	    
 	    video.play();
 
-	    // Update the button icon to 'Pause'
 	    playButton.innerHTML = '<img src="icons/pause-icon.png"/>';
 	  } else {
-	    // Pause the video
+	    
 	    video.pause();
 
-	    // Update the button icon to 'Play'
 	    playButton.innerHTML = '<img src="icons/play-icon.png"/>';
 	  }
 	});
-
-    
-    //Display current time
+ 
+    // Display current time
     video.addEventListener('timeupdate', function(){
       var cTime = document.getElementById("currentTime");
       var minutes = Math.floor(video.currentTime / 60);
@@ -46,15 +34,14 @@ window.onload = function() {
       cTime.innerHTML = ( x + y + "  " + "/ " );
     });
     
-   // Make the grey and orange progress bar work 
-
+ 
+    // Make time counter work
         video.addEventListener('timeupdate', function(e) {
           var value = (100 / video.duration) * video.currentTime;
           progressBar.value = value;
         });
 
-    //Progress 
-
+    // Make the grey and orange progress bar work 
         progressBar.addEventListener('click', function(e) {
           var percent = e.offsetX * this.max / this.offsetWidth;
           video.currentTime = video.duration * (percent / 100);
@@ -63,17 +50,15 @@ window.onload = function() {
 
 	// Event listener for the mute button
 	muteButton.addEventListener("click", function() {
-		if (video.muted == false) {
-			// Mute the video
+		if (video.muted === false) {
+
 			video.muted = true;
 
-			// mute icons
 			muteButton.innerHTML = '<img src="icons/volume-off-icon.png"/>';
 		} else {
-			// Unmute the video
+			
 			video.muted = false;
 
-			// Update the button text
 			muteButton.innerHTML = '<img src="icons/volume-on-icon.png"/>';
 		}
 	});
@@ -94,10 +79,10 @@ window.onload = function() {
     } else if (document.mozFullScreen === true) {
       document.mozCancelFullScreen();
     }
-    fullScreenButton.innerHTML = '<img src="icons/fullscreen-icon.png"/>'
+    fullScreenButton.innerHTML = '<img src="icons/fullscreen-icon.png"/>';
 	});	
     
-    //highlight the lines
+    // Highlight the lines
     
     function startLine(startID) {
 	  var line = document.getElementById(startID).classList;
@@ -194,4 +179,4 @@ window.onload = function() {
   }
 });
     
-}
+};

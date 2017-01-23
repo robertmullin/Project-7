@@ -120,7 +120,6 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-/*     -webkit-appearance: none;*/
     background-color: orange;
     opacity: 0.8;
     width: 10px;
@@ -160,5 +159,6 @@ progress::-webkit-progress-bar {
 	background: rgba(0,0,0,0);
 }
 
-
-
+progress::-webkit-progress-value {
+	background-color: coral;
+}
